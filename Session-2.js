@@ -127,7 +127,9 @@ function divisors(num) {
     }
     return res
 }
-// todo Check if two numbers are coprime.
+
+
+// todo 4. Check if two numbers are coprime.
 function coPrime(num1, num2) {
     return gcd(num1, num2) === 1;
 }

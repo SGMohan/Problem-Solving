@@ -18,17 +18,19 @@ const readline = require("readline");
 //   oddOrEven,
 //   squareOfNumber,
 // } = require("../Problem Solving/Session-1");
-const {
-  factorial,
-  fibonacci,
-  sumOfDigits,
-  isPalindrome,
-  isPrime,
-  gcd,
-  lcm,
-  divisors,
-  coPrime,
-} = require("../Problem Solving/Session-2");
+// const {
+//   factorial,
+//   fibonacci,
+//   sumOfDigits,
+//   isPalindrome,
+//   isPrime,
+//   gcd,
+//   lcm,
+//   divisors,
+//   coPrime,
+// } = require("../Problem Solving/Session-2");
+const { reverseStr, isPalindromeUsingRev, isPalindrome, countVowelsAndConsonants, removeDuplicates, toUpperCase, toLowerCase, longestWord, findAllSubstrings, concatStr, countWords, replaceSpaces, shortestWord, frequencyOfChar, isAnagram, firstNonRepeatingChar, removeVowels, countOccurences } = require("./Session-3");
+
 const inp = readline.createInterface({
   input: process.stdin,
 });
@@ -146,7 +148,80 @@ inp.on("close", () => {
   // console.log(...divisors(value));
 
   // 4. Check if two numbers are coprime.
-  const [val1, val2] = userInput[0].split(" ").map(Number);
-  console.log(coPrime(val1, val2));
+  // const [val1, val2] = userInput[0].split(" ").map(Number);
+  // console.log(coPrime(val1, val2));
+
+  // Session-3:
+  // 1. reverse a string
+  // const value = userInput[0];
+  // console.log(reverseStr(value));
+
+  // 2. check the string is a palindrome
+  // const value = userInput[0];
+  // console.log(isPalindromeUsingRev(value));
+  // console.log(isPalindrome(value));
+
+  // 3. Count the vowels and consonants in a string
+  // const value = userInput[0];
+  // console.log(countVowelsAndConsonants(value));
+
+  // 4. remove duplicates from a string
+  // const value = userInput[0];
+  // console.log(removeDuplicates(value));
+
+  // 5. Convert a string to lowercase/uppercase
+  // const value = userInput[0];
+  // // console.log(toUpperCase(value));
+  // console.log(toLowerCase(value));
+
+  // 6. find the longest word in a sentence
+  // const value = userInput[0];
+  // console.log(longestWord(value));  
+
+  // 7. find all substrings of a given string
+  // const value = userInput[0];
+  // console.log(findAllSubstrings(value));
+  
+  // TODO-SESSION-3:
+  // 1. Concatenate two strings
+  // const val1 = userInput[0];
+  // const val2 = userInput[1];
+  // console.log(concatStr(val1, val2));
+  
+  // 2. find the frequency of each character in a string
+  // const value = userInput[0];
+  // console.log(frequencyOfChar(value));
+  
+  // 3. replace spaces with %20
+  // const value = userInput[0];
+  // console.log(replaceSpaces(value));
+  
+  // 4. Check the string is a anagram or not
+  // const val1 = userInput[0];
+  // const val2 = userInput[1];
+  // console.log(isAnagram(val1, val2));
+  
+  // 5.Count the number of words in a sentence
+  // const value = userInput[0];
+  // console.log(countWords(value));
+  
+  // 6. Find the first non repeating character from a string
+  // const value = userInput[0];
+  // console.log(firstNonRepeatingChar(value));
+  
+  
+  // 7. remove vowels from a string
+  // const value = userInput[0];
+  // console.log(removeVowels(value));
+  
+  // 8. find the shortest word in a sentence
+  // const value = userInput[0];
+  // console.log(shortestWord(value));
+  
+  
+  // 9. Count occurrences of a substring within a string.
+  const val1 = userInput[0];
+  const val2 = userInput[1];
+  console.log(countOccurences(val1, val2));
   //end-here
 });
