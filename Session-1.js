@@ -1,4 +1,4 @@
-// Understanding the problem statement and systematic solutions
+// Day 1: Understanding the problem statement and systematic solutions
 // 1. Determine if a number is a positive or negative
 function positiveOrNegative(number) {
   if (number > 0) {

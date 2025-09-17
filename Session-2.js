@@ -1,4 +1,4 @@
-// Maths and Pattern
+// Day 2:  Maths and Pattern
 // pattern handled later
 // 1. Calculate the factorial of a number
 function factorial(num) {
@@ -21,7 +21,7 @@ function fibonacci(num) {
     return fibo;
 }
 
-// Sum of digits in a number
+// 3. Sum of digits in a number
 const floor = num => num - num % 1;
 function sumOfDigits(num) {
     if (num < 0) {
@@ -86,19 +86,51 @@ function isPrime(num) {
 //     return true;
 // }
 
+// patterns basics
+// function patterns(n = 0) {
+//   for (let row = 0; row < n; row++) {
+//     let result = [];
+//     for (let col = 0; col < n; col++) {
+//       result.push("*");
+//     }
+//     console.log(result.join(""));
+//   }
+// }
+// patterns(5);
 
-module.exports = {
-  factorial,
-  fibonacci,
-  sumOfDigits,
-  isPalindrome,
-  isPrime,
-  gcd,
-  lcm,
-  divisors,
-  coPrime,
-};
+// 6. Print a right-angled triangle pattern of asterisks.
+// function patterns(n = 0) {
+//   for (let row = 0; row < n; row++) {
+//     let result = [];
+//       for (let col = 0; col < n; col++) {
+//           if (row >= col) {
+//               result.push("*");
+//           }
+//           else {
+//               result.push(" ");
+//           }
+//     }
+//     console.log(result.join(""));
+//   }
+// }
+// patterns(5);
 
+
+// 7. Print a hollow square pattern.
+// function patterns(n = 0) {
+//   for (let row = 0; row < n; row++) {
+//     let result = [];
+//       for (let col = 0; col < n; col++) {
+//           if (row == 0 || col == 0 || row == n - 1 || col == n - 1) {
+//               result.push("*");
+//           } else {
+//               result.push(" ");
+//         }
+//     }
+//     console.log(result.join(""));
+//   }
+// }
+// patterns(10);
 
 
 // todo Post-Session Practice Questions:
@@ -134,9 +166,108 @@ function coPrime(num1, num2) {
     return gcd(num1, num2) === 1;
 }
 
-// todo Print a diamond pattern of stars.
-// todo Print Pascal’s triangle up to N rows.
-// todo Print a checkerboard pattern.
-// todo Generate a pyramid pattern of numbers.
-// todo Print an inverted triangle pattern of stars.
+// todo 5. Print a diamond pattern of stars.
+// function patterns(n = 0) {
+//   for (let row = 0; row < n; row++) {
+//     let result = [];
+//     for (let col = 0; col < n + row; col++) {
+//       if (col < n - row - 1) {
+//         result.push(" ");
+//       } else {
+//         result.push("*");
+//       }
+//     }
+//     console.log(result.join(""));
+//     }
+//     for (let row = n - 2; row >= 0; row--) {
+//       let result = [];
+//       for (let col = 0; col < n + row; col++) {
+//         if (col < n - row - 1) {
+//           result.push(" "); // leading spaces
+//         } else {
+//           result.push("*"); // stars
+//         }
+//       }
+//       console.log(result.join(""));
+//     }
+// }
+// patterns(5);
 
+
+// todo 6. Print Pascal’s triangle up to N rows.
+// function patterns(n = 0) {
+//   for (let row = 0; row < n; row++) {
+//       let result = [];
+//       let num = 1;
+//       for (let col = 0; col <= row; col++) {
+//         result.push(num);
+//         num = num * (row - col) / (col + 1);
+//     }
+//     console.log(result.join(" "));
+//   }
+// }
+
+// patterns(5);
+
+
+// todo 7. Print a checkerboard pattern.
+function patterns(n = 0) {
+  for (let row = 0; row < n; row++) {
+    let result = [];
+    for (let col = 0; col < n; col++) {
+      if ((row + col) % 2 == 0) {
+        result.push("*");
+      } else {
+        result.push(" ");
+      }
+    }
+    console.log(result.join(""));
+  }
+}
+patterns(8);
+
+
+
+// todo 8. Generate a pyramid pattern of numbers.
+// function pyramidPatterns(n = 0) {
+//     for (let row = 0; row < n; row++) {
+//       let result = "";
+//         for (let col = 0; col < n-row; col++) {
+//             result += " "
+//         }
+//         for (let num = 1; num <= row; num++) {
+//             result += num + " ";
+//         }
+//         console.log(result.trimEnd());
+//     }
+// }
+// pyramidPatterns(5);
+
+
+// todo 9. Print an inverted triangle pattern of stars.
+// function patterns(n = 0) {
+//   for (let row = 0; row < n; row++) {
+//     let result = [];
+//     for (let col = 0; col < n; col++) {
+//       if (col < n-row) {
+//         result.push("*");
+//       } else {
+//         result.push(" ");
+//       }
+//     }
+//     console.log(result.join(""));
+//   }
+// }
+// patterns(5);
+
+module.exports = {
+  factorial,
+  fibonacci,
+  sumOfDigits,
+  isPalindrome,
+    isPrime,
+  gcd,
+  lcm,
+  divisors,
+  coPrime,
+};

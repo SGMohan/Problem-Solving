@@ -1,5 +1,23 @@
 // Getting input via STDIN
 const readline = require("readline");
+
+const { minAndMax,
+  sortingArray,
+  rotateRotateByOnePosition,
+  secondLargest,
+  removeDuplicates,
+  sumOfArray,
+  countOccurences, 
+  mergeTwoSortedArrays,
+  reverseArray,
+  rotateRotateByLeft,
+  searchElement,
+  isPalindromeArray,
+  intersectionOfTwoArrays,
+  cumulativeSum,
+  productOfArray} = require("./Session-4");
+
+
 // const {
 //   positiveOrNegative,
 //   sumOfTwoIntegers,
@@ -18,6 +36,7 @@ const readline = require("readline");
 //   oddOrEven,
 //   squareOfNumber,
 // } = require("../Problem Solving/Session-1");
+
 // const {
 //   factorial,
 //   fibonacci,
@@ -29,7 +48,25 @@ const readline = require("readline");
 //   divisors,
 //   coPrime,
 // } = require("../Problem Solving/Session-2");
-const { reverseStr, isPalindromeUsingRev, isPalindrome, countVowelsAndConsonants, removeDuplicates, toUpperCase, toLowerCase, longestWord, findAllSubstrings, concatStr, countWords, replaceSpaces, shortestWord, frequencyOfChar, isAnagram, firstNonRepeatingChar, removeVowels, countOccurences } = require("./Session-3");
+
+// const { reverseStr,
+//   isPalindromeUsingRev,
+//   isPalindrome,
+//   countVowelsAndConsonants,
+//   removeDuplicates,
+//   toUpperCase,
+//   toLowerCase,
+//   longestWord,
+//   findAllSubstrings,
+//   concatStr,
+//   countWords,
+//   replaceSpaces,
+//   shortestWord,
+//   frequencyOfChar,
+//   isAnagram,
+//   firstNonRepeatingChar,
+//   removeVowels,
+//   countOccurences } = require("./Session-3");
 
 const inp = readline.createInterface({
   input: process.stdin,
@@ -176,52 +213,116 @@ inp.on("close", () => {
 
   // 6. find the longest word in a sentence
   // const value = userInput[0];
-  // console.log(longestWord(value));  
+  // console.log(longestWord(value));
 
   // 7. find all substrings of a given string
   // const value = userInput[0];
   // console.log(findAllSubstrings(value));
-  
+
   // TODO-SESSION-3:
   // 1. Concatenate two strings
   // const val1 = userInput[0];
   // const val2 = userInput[1];
   // console.log(concatStr(val1, val2));
-  
+
   // 2. find the frequency of each character in a string
   // const value = userInput[0];
   // console.log(frequencyOfChar(value));
-  
+
   // 3. replace spaces with %20
   // const value = userInput[0];
   // console.log(replaceSpaces(value));
-  
+
   // 4. Check the string is a anagram or not
   // const val1 = userInput[0];
   // const val2 = userInput[1];
   // console.log(isAnagram(val1, val2));
-  
+
   // 5.Count the number of words in a sentence
   // const value = userInput[0];
   // console.log(countWords(value));
-  
+
   // 6. Find the first non repeating character from a string
   // const value = userInput[0];
   // console.log(firstNonRepeatingChar(value));
-  
-  
+
   // 7. remove vowels from a string
   // const value = userInput[0];
   // console.log(removeVowels(value));
-  
+
   // 8. find the shortest word in a sentence
   // const value = userInput[0];
   // console.log(shortestWord(value));
-  
-  
+
   // 9. Count occurrences of a substring within a string.
-  const val1 = userInput[0];
-  const val2 = userInput[1];
-  console.log(countOccurences(val1, val2));
+  // const val1 = userInput[0];
+  // const val2 = userInput[1];
+  // console.log(countOccurences(val1, val2));
+
+  // Session-4:
+  // 1. Find the maximum and minimum elements in the array
+  // const value = userInput[0].split(" ").map(Number);
+  // console.log(minAndMax(value));
+
+  // 2. Sort an array of integers
+  // const value = userInput[0].split(" ").map(Number);
+  // console.log(sortingArray(value));
+
+  // 3. Rotate an array by one position
+  // const value = userInput[0].split(" ").map(Number);
+  // console.log(rotateRotateByOnePosition(value));
+
+  // 4. Find the second-largest element in an array
+  // const value = userInput[0].split(" ").map(Number);
+  // console.log(secondLargest(value));
+
+  // 5. Remove duplicates from the sorted array
+  // const value = userInput[0].split(" ").map(Number);
+  // console.log(removeDuplicates(value));
+
+  // 6. Calculate the sum of elements in the array
+  // const value = userInput[0].split(" ").map(Number);
+  // console.log(sumOfArray(value));
+
+  // 7. find the number of occurences of all the elements in the array
+  // const value = userInput[0].split(" ").map(Number);
+  // console.log(countOccurences(value));
+
+  // TODO-SESSION-4:
+  // 1. Merge two sorted arrays.
+  // const arr1 = userInput[0].split(" ").map(Number);
+  // const arr2 = userInput[1].split(" ").map(Number);
+  // console.log(mergeTwoSortedArrays(arr1, arr2));
+
+  // 2. Reverse the elements in the array
+  // const value = userInput[0].split(" ").map(Number);
+  // console.log(reverseArray(value))
+
+  // 3. Rotate the array element by left in K positions
+  // const value = userInput[0].split(" ").map(Number);
+  // const k = +userInput[1];
+  // console.log(rotateRotateByLeft(value,k))
+
+  // 4. Search the element in sorted array
+  // const val1 = userInput[0].split(" ").map(Number);
+  // const val2 = +userInput[1];
+  // console.log(searchElement(val1, val2))
+
+  // 5. Cumulative sum of array
+  // const value = userInput[0].split(" ").map(Number);
+  // console.log(cumulativeSum(value))
+
+  // 5. Calculate the product of all elements in an array
+  // const value = userInput[0].split(" ").map(Number);
+  // console.log(productOfArray(value));
+
+  // 7. IsPalindrome
+  // const value = userInput[0].split(" ").map(Number);
+  // console.log(isPalindromeArray(value))
+
+  // 8. Intersection of two arrays
+  // const val1 = userInput[0].split(" ").map(Number);
+  // const val2 = userInput[1].split(" ").map(Number);
+  // console.log(...intersectionOfTwoArrays(val1, val2))
   //end-here
 });

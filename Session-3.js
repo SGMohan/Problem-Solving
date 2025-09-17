@@ -180,47 +180,24 @@ function findAllSubstrings(str = "") {
   return substrings;
 }
 
-module.exports = {
-  reverseStr,
-  isPalindromeUsingRev,
-  isPalindrome,
-  countVowelsAndConsonants,
-  removeDuplicates,
-  toUpperCase,
-  toLowerCase,
-  longestWord,
-  findAllSubstrings,
-  concatStr,
-  //   frequencyOfChar,
-  replaceSpaces,
-  //   isAnagram,
-  countWords,
-  firstNonRepeatingChar,
-  removeVowels,
-  shortestWord,
-  countOccurences,
-};
-
 // ? Post-Session Practice Questions:
 // todo 1. Concatenate two strings.
 function concatStr(str1 = "", str2 = "") {
   return str1 + str2;
 }
 
-
 // todo 2. Find the frequency of each character in a string.
-// function frequencyOfChar(str = "") {
-//   const freq = {};
-//   for (let char of str) {
-//     if (freq[char]) {
-//       freq[char]++;
-//     } else {
-//       freq[char] = 1;
-//     }
-//   }
-//   return freq;
-// }
-
+function frequencyOfChar(str = "") {
+  const freq = {};
+  for (let char of str) {
+    if (freq[char]) {
+      freq[char]++;
+    } else {
+      freq[char] = 1;
+    }
+  }
+  return freq;
+}
 
 // todo 3. Replace spaces in a string with %20.
 function replaceSpaces(str = "") {
@@ -235,7 +212,6 @@ function replaceSpaces(str = "") {
   return res;
 }
 
-
 // todo 4. Check if a string is an anagram of another.
 // solution-1:
 // function isAnagram(str1 = "", str2 = "") {
@@ -249,18 +225,18 @@ function replaceSpaces(str = "") {
 // }
 
 // solution-2:
-// function isAnagram(str1 = "", str2 = "") {
-//     if (str1.length !== str2.length) return false;
-//     const frequency = {};
-//     for (let char of str1) {
-//         frequency[char] = (frequency[char] || 0) + 1;
-//     }
-//     for (let char of str2) {
-//         if (!frequency[char]) return false;
-//         frequency[char]--;
-//     }
-//     return true;
-// }
+function isAnagram(str1 = "", str2 = "") {
+  if (str1.length !== str2.length) return false;
+  const frequency = {};
+  for (let char of str1) {
+    frequency[char] = (frequency[char] || 0) + 1;
+  }
+  for (let char of str2) {
+    if (!frequency[char]) return false;
+    frequency[char]--;
+  }
+  return true;
+}
 
 // todo 5. Count the number of words in a sentence.
 function countWords(str = "") {
@@ -278,47 +254,33 @@ function countWords(str = "") {
 }
 // todo 6. Find the first non-repeating character in a string.
 function firstNonRepeatingChar(str = "") {
-    const frequency = {};
-    for (let char of str) {
-        if (!/[a-z0-9]/i.test(char)) continue;
-        frequency[char] = (frequency[char] || 0) + 1;
-    }
-    for (let char of str) {
-      if (frequency[char] === 1) return char;
-    }
-    return null;
+  const frequency = {};
+  for (let char of str) {
+    if (!/[a-z0-9]/i.test(char)) continue;
+    frequency[char] = (frequency[char] || 0) + 1;
+  }
+  for (let char of str) {
+    if (frequency[char] === 1) return char;
+  }
+  return null;
 }
-
-
 
 // todo 7. Remove all vowels from a string.
 function removeVowels(str = "") {
-      const vowels = new Set([
-        "a",
-        "e",
-        "i",
-        "o",
-        "u",
-        "A",
-        "E",
-        "I",
-        "O",
-        "U",
-      ]);
-    let result = []
-    for (let char of str) {
-        if (!vowels.has(char)) {
-            result.push(char);
-        }
+  const vowels = new Set(["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]);
+  let result = [];
+  for (let char of str) {
+    if (!vowels.has(char)) {
+      result.push(char);
     }
-    return result.join(" ");
+  }
+  return result.join(" ");
 }
-
 
 // todo 8. Find the shortest word in a sentence.
 function shortestWord(str = "") {
-    const words = str.split(/\s+/);
-    let shortest = words[0];
+  const words = str.split(/\s+/);
+  let shortest = words[0];
   for (let word of words) {
     if (word.length < shortest.length) {
       shortest = word;
@@ -327,23 +289,41 @@ function shortestWord(str = "") {
   return shortest;
 }
 
-
 // todo 9. Count occurrences of a substring within a string.
 function countOccurences(str = "", substr = "") {
-    if(substr =="") return 0;
-    let count = 0;
-    
-    for (let ind = 0; ind <= str.length; ind++){
-        let match = true;
-        for (let ind1 = 0; ind1 < substr.length; ind1++){
-            if (str[ind + ind1] !== substr[ind1]) {
-                match = false;
-                break;
-            }
-        }
-        if (match) count++;
-    }
-    return count
+  if (substr == "") return 0;
+  let count = 0;
 
+  for (let ind = 0; ind <= str.length; ind++) {
+    let match = true;
+    for (let ind1 = 0; ind1 < substr.length; ind1++) {
+      if (str[ind + ind1] !== substr[ind1]) {
+        match = false;
+        break;
+      }
+    }
+    if (match) count++;
+  }
+  return count;
 }
 
+module.exports = {
+  reverseStr,
+  isPalindromeUsingRev,
+  isPalindrome,
+  countVowelsAndConsonants,
+  removeDuplicates,
+  toUpperCase,
+  toLowerCase,
+  longestWord,
+  findAllSubstrings,
+  concatStr,
+  frequencyOfChar,
+  replaceSpaces,
+  isAnagram,
+  countWords,
+  firstNonRepeatingChar,
+  removeVowels,
+  shortestWord,
+  countOccurences,
+};
