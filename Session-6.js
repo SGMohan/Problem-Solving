@@ -1,6 +1,6 @@
-//? Day 6: Sorting Algorithms
-//* Session Focus: Introduction to sorting algorithms: bubble sort, selection sort, and insertion sort.
-//? Session Practice Questions:
+// Day 6: Sorting Algorithms
+// Session Focus: Introduction to sorting algorithms: bubble sort, selection sort, and insertion sort.
+// Session Practice Questions:
 // 1. Implement bubble sort on an array of integers.
 function bubbleSort(arr = []) { 
     let swapped = false;

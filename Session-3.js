@@ -1,5 +1,5 @@
-//? Day 3: Strings & String Manipulation
-//* Session Focus: Basic string operations, string traversal, and manipulation techniques.
+// Day 3: Strings & String Manipulation
+// Session Focus: Basic string operations, string traversal, and manipulation techniques.
 // 1. Reverse a string
 function reverseStr(str = "") {
   const resArr = [];

@@ -1,21 +1,23 @@
 // Getting input via STDIN
 const readline = require("readline");
 
-const { minAndMax,
-  sortingArray,
-  rotateRotateByOnePosition,
-  secondLargest,
-  removeDuplicates,
-  sumOfArray,
-  countOccurences, 
-  mergeTwoSortedArrays,
-  reverseArray,
-  rotateRotateByLeft,
-  searchElement,
-  isPalindromeArray,
-  intersectionOfTwoArrays,
-  cumulativeSum,
-  productOfArray} = require("./Session-4");
+const { targetSum, findLenOfLongSubstring, firstNonRepeatingChar, maxSumSubArray, checkInclusion, findTripletSumZero, maxLenSubArray } = require("./Session-10");
+
+// const { minAndMax,
+//   sortingArray,
+//   rotateRotateByOnePosition,
+//   secondLargest,
+//   removeDuplicates,
+//   sumOfArray,
+//   countOccurences, 
+//   mergeTwoSortedArrays,
+//   reverseArray,
+//   rotateRotateByLeft,
+//   searchElement,
+//   isPalindromeArray,
+//   intersectionOfTwoArrays,
+//   cumulativeSum,
+//   productOfArray} = require("./Session-4");
 
 
 // const {
@@ -324,5 +326,38 @@ inp.on("close", () => {
   // const val1 = userInput[0].split(" ").map(Number);
   // const val2 = userInput[1].split(" ").map(Number);
   // console.log(...intersectionOfTwoArrays(val1, val2))
+
+  // Day 10: Advanced Techniques & Recap
+  // 1. Find two numbers in a sorted array that add up to a target sum (two-pointer).
+  // const arr = userInput[0].split(" ").map(Number);
+  // const total = +userInput[1];
+  // console.log(targetSum(arr, total));
+
+  // 2. Find the length of the longest substring without repeating characters (sliding window).
+  // const str = userInput[0];
+  // console.log(findLenOfLongSubstring(str))
+
+  // 3. Find the first non-repeating character in a string (hashing).
+  // const str = userInput[0];
+  // console.log(firstNonRepeatingChar(str))
+
+  // 4. Find the maximum sum of a subarray of size k (sliding window).
+  // const val1 = userInput[0].split(" ").map(Number);
+  // const val2 = +userInput[1];
+  // console.log(maxSumSubArray(val1, val2))
+  
+  // 5. Check if a permutation of one string is a substring of another (hashing).
+  // const val1 = userInput[0];
+  // const val2 = userInput[1];
+  // console.log(checkInclusion(val1, val2))
+  
+  // 6. Find all triplets in an array that sum up to zero (two-pointer).
+  // const arr = userInput[0].split(" ").map(Number);
+  // console.log(findTripletSumZero(arr))
+
+  // 7. Find the maximum length of a subarray with equal 0s and 1s (sliding window).
+  // const arr = userInput[0].split(" ").map(Number);
+  // console.log(maxLenSubArray(arr));
+
   //end-here
 });

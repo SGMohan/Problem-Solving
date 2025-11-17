@@ -1,6 +1,6 @@
-//? Day 5: Searching Algorithms
-//* Session Focus: Linear search and binary search techniques.
-//? Session Practice Questions:
+// Day 5: Searching Algorithms
+// Session Focus: Linear search and binary search techniques.
+// Session Practice Questions:
 // 1. Implement a search algo to find an element in an array. (No sorted means linear search)
 function linearSearch(arr, target) {
     for (let ind = 0; ind < arr.length; ind++) {
